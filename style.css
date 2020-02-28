@@ -1,0 +1,434 @@
+/*!
+ * animate.css -https://daneden.github.io/animate.css/
+ * Version - 3.7.2
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2019 Daniel Eden
+ */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+    background-image: url("imgs/img1.png");
+    background-size: cover;
+    height: 100vh;
+    position:relative;
+}
+
+.header-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.header-title h1 {
+    position: relative;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: calc(40px + 5vw);
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 0.02em;
+    text-shadow: 0 0 0.15em #848484;
+    user-select: none;
+    white-space: nowrap;
+    filter: blur(0.007em);
+    animation: shake 2.5s linear forwards;
+}
+
+.header-title h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    -webkit-clip-path: polygon(10% 0%, 44% 0%, 70% 100%, 55% 100%);
+            clip-path: polygon(10% 0%, 44% 0%, 70% 100%, 55% 100%);
+}
+
+.header-title h1::before,
+.header-title h1::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header-title h1::before {
+    animation: crack1 2.5s linear forwards;
+    -webkit-clip-path: polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
+}
+
+.header-title h1::after {
+    animation: crack2 2.5s linear forwards;
+    -webkit-clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
+            clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
+}
+
+@keyframes shake {
+    5%, 15%, 25%, 35%, 55%, 65%, 75%, 95% {
+        filter: blur(0.018em);
+        transform: translateY(0.018em) rotate(0deg);
+    }
+
+    10%, 30%, 40%, 50%, 70%, 80%, 90% {
+        filter: blur(0.01em);
+        transform: translateY(-0.018em) rotate(0deg);
+    }
+
+    20%, 60% {
+        filter: blur(0.03em);
+        transform: translate(-0.018em, 0.018em) rotate(0deg);
+    }
+
+    45%, 85% {
+        filter: blur(0.03em);
+        transform: translate(0.018em, -0.018em) rotate(0deg);
+    }
+
+    100% {
+        filter: blur(0.007em);
+        transform: translate(0) rotate(-0.5deg);
+    }
+}
+
+@keyframes crack1 {
+    0%, 95% {
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        transform: translate(-51%, -48%);
+    }
+}
+
+@keyframes crack2 {
+    0%, 95% {
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        transform: translate(-49%, -53%);
+    }
+}
+
+.buttun {
+    position: absolute;
+    top: 75%;
+    left:50%;
+    transform : translate(-50%,-50%);
+}
+
+.btn-2 {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 0.4em 1.6em;
+    font-size: 1.2em;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    border: 1px #fff solid;
+    border-radius: 20px;
+    transition: 0.4s ease;
+}
+
+.btn-2:hover {
+    color: #fff;
+    background: #848484;
+    text-decoration: none;
+}
+
+.body{
+    height: 100vh;
+    background-color: #2E2E2E;
+}
+
+.container {
+    color: #fff;
+    text-align: center;
+    padding:150px 0;
+}
+
+.title {
+    position: absolute;
+    position: absolute;
+    top: 25%;
+    left:50%;
+    transform : translate(-50%,-50%);
+}
+
+.title h2 {
+    color: #FAFAFA;
+    font-family: 'DIN Condensed',sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 25px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, .7);
+}
+
+.name {
+    animation-name: zoomInRight;
+    animation-duration: 1s;
+}
+
+.programmer {
+    animation-name: zoomInRight;
+    animation-duration: 2s;
+}
+
+.challenger {
+    animation-name: zoomInRight;
+    animation-duration: 3s;
+}
+
+@-webkit-keyframes zoomInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+@keyframes zoomInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+.zoomInRight {
+  -webkit-animation-name: zoomInRight;
+  animation-name: zoomInRight;
+}
+
+@-webkit-keyframes zoomInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+.ma a,
+.ma a:visited,
+.ma a:hover,
+.ma a:active {
+	text-decoration: none;
+	color: #fff;
+}
+.cp_fullscreenmenu {
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+}
+/*menuコンテンツ*/
+.cp_fullscreenmenu .menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	visibility: hidden;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	outline: 1px solid transparent;
+
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
+	align-items: center;
+	justify-content: center;
+}
+.cp_fullscreenmenu .menu > div {
+	display: flex;
+	overflow: hidden;
+	width: 200vw;
+	height: 200vw;
+	transition: all 0.4s ease;
+	-webkit-transform: scale(0);
+	        transform: scale(0);
+	text-align: center;
+	color: #fff;
+	border-radius: 50%;
+	background: rgba(50,50,50 ,0.8);
+
+	flex: none;
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
+	align-items: center;
+	justify-content: center;
+}
+.cp_fullscreenmenu .menu > div > ul {
+	display: block;
+	max-height: 100vh;
+	margin: 0;
+	padding: 0 1em;
+	list-style: none;
+	transition: opacity 0.4s ease;
+	opacity: 0;
+}
+.cp_fullscreenmenu .menu > div > ul > li {
+	font-size: 32px;
+	display: block;
+	margin: 1em;
+	padding: 0;
+}
+.cp_fullscreenmenu .menu > div > ul > li > a {
+	position: relative;
+	display: inline;
+	cursor: pointer;
+	color: #bdbdbd;
+	transition: color 0.4s ease;
+}
+.cp_fullscreenmenu .menu > div > ul > li > a:hover {
+	color: #fff;
+}
+.cp_fullscreenmenu .menu > div > ul > li > a:hover:after {
+	width: 100%;
+}
+.cp_fullscreenmenu .menu > div > ul > li > a:after {
+	position: absolute;
+	z-index: 1;
+	bottom: -0.15em;
+	left: 0;
+	width: 0;
+	height: 2px;
+	content: '';
+	transition: width 0.4s ease;
+	background: #e5e5e5;
+}
+/*クリックしたらメニューが開閉の動作*/
+.cp_fullscreenmenu .toggle {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+	opacity: 0;
+}
+.cp_fullscreenmenu .toggle:checked + .hamburger > span {
+	-webkit-transform: rotate(135deg);
+	        transform: rotate(135deg);
+}
+.cp_fullscreenmenu .toggle:checked + .hamburger > span:before,
+.cp_fullscreenmenu .toggle:checked + .hamburger > span:after {
+	top: 0;
+	-webkit-transform: rotate(90deg);
+	        transform: rotate(90deg);
+}
+.cp_fullscreenmenu .toggle:checked + .hamburger > span:after {
+	opacity: 0;
+}
+.cp_fullscreenmenu .toggle:checked ~ .menu {
+	visibility: visible;
+	pointer-events: auto;
+}
+.cp_fullscreenmenu .toggle:checked ~ .menu > div {
+	transition-duration: 0.75s;
+	-webkit-transform: scale(1);
+	        transform: scale(1);
+}
+.cp_fullscreenmenu .toggle:checked ~ .menu > div > ul {
+	opacity: 1;
+}
+.cp_fullscreenmenu .toggle:checked ~ .menu > div > ul li:nth-of-type(1) {
+	transition-delay: 0.4s;
+}
+.cp_fullscreenmenu .toggle:checked ~ .menu > div > ul li:nth-of-type(2) {
+	transition-delay: 0.6s;
+}
+.cp_fullscreenmenu .toggle:checked ~ .menu > div > ul li:nth-of-type(3) {
+	transition-delay: 0.8s;
+}
+.cp_fullscreenmenu .toggle:checked ~ .menu > div > ul li:nth-of-type(4) {
+	transition-delay: 1.0s;
+}
+.cp_fullscreenmenu .toggle:hover + .hamburger {
+	box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.cp_fullscreenmenu .toggle:checked:hover + .hamburger > span {
+	-webkit-transform: rotate(225deg);
+	        transform: rotate(225deg);
+}
+/*ハンバーガー*/
+.cp_fullscreenmenu .hamburger {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 60px;
+	height: 60px;
+	padding: 0.5em 1em;
+	cursor: pointer;
+	transition: box-shadow 0.4s ease;
+	border-radius: 0 0.12em 0.12em 0;
+	background: rgba(50,50,50 ,0.7);
+
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
+}
+.cp_fullscreenmenu .hamburger > span {
+	position: relative;
+	top: 50%;
+	display: block;
+	width: 100%;
+	height: 2px;
+	transition: all 0.4s ease;
+	background: #fff;
+}
+.cp_fullscreenmenu .hamburger > span:before,
+.cp_fullscreenmenu .hamburger > span:after {
+	position: absolute;
+	z-index: 1;
+	top: -10px;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 2px;
+	content: '';
+	transition: all 0.4s ease;
+	background-color: #fff;
+}
+.cp_fullscreenmenu .hamburger > span:after {
+	top: 10px;
+}
