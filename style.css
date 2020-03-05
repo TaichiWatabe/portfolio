@@ -144,14 +144,14 @@
 }
 
 .body{
-    height: 100vh;
     background-color: #2E2E2E;
+    font-family: 'ヒラギノ角ゴ StdN','Hiragino Kaku Gothic StdN',sans-serif;
 }
 
 .container {
     color: #fff;
     text-align: center;
-    padding:150px 0;
+    padding:80px 0;
 }
 
 .title {
@@ -432,3 +432,4 @@
 .cp_fullscreenmenu .hamburger > span:after {
 	top: 10px;
 }
+
