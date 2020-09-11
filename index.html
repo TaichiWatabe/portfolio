@@ -5,11 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel = "stylesheet" href = "style.css" type ="text/css" >
+    <script src="https://kit.fontawesome.com/068ffe27ac.js" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="shortcut icon" href="imgs/favicon.ico">
     <title>Portfolio</title>
   </head>
+  <div id="topScroll" class="topIcon fas fa-chevron-up" onclick="goTop()"></div>
   <body>
     <header>
         <div class = "header" id = "home">
@@ -23,7 +25,7 @@
             </div>
             <div class = "buttun">
                 <hr color="#fff" class="header-border">
-                <a class = "btn-2" href="#sample" role="button">who's me?</a>
+                <a class = "btn-2" href="#profile" role="button">who's me?</a>
             </div>
         </div>
     </header>
@@ -34,18 +36,83 @@
     		<div>
     		<ul>
       		<li><a class = "ma" href="#home">Home</a></li>
-      		<li><a class = "ma" href="#sample">Profile</a></li>
-      		<li><a class = "ma" href="#">Works</a></li>
-      		<li><a class = "ma" href="#">Contact</a></li>
+      		<li><a class = "ma" href="#profile">Profile</a></li>
+      		<li><a class = "ma" href="#works">Works</a></li>
+      		<li><a class = "ma" href="#contact">Contact</a></li>
     		</ul>
     		</div>
     	</div>
     </div>
     
-    <div class = "body" id = "sample">
+    <div class = "body">
         <div class = "container">
-            <h1>Profile</h1>
-            <p>プロフィール</p>
+            <h1 class = "h1-title" id = "profile">Profile</h1>
+            <p class = "p">プロフィール</p>
+            <hr color="#FE2E64" class = "hr">
+            <div class = "row">
+                <div class = "col-md-5 int">
+                    <img src = "imgs/myicon.jpg" alt = "myicon" class = "myicon-img">
+                </div>
+                
+                <div class = "col-md-7 int2">
+                    <li class ="int-p">
+                        <span class = "int-span">名前</span>
+                         <span>：<span class = "bold">渡部 泰一</span> Watabe taichi</span>
+                    </li>
+                    <li class ="int-p">
+                        <span class = "int-span">出身</span>
+                        <span>：<span class = "bold">神奈川県</span>（現在も在住）</span>
+                    </li>
+                    <li class ="int-p">
+                        <span class = "int-span">経緯</span>
+                        <span>：大学在学中に奨学金の返済の概算が届き、その額が600万円を超えていたことから危機感を抱き、学生のうちから稼ぐスキルを身につけることに注力しました。<br><br>
+                        結果、日経225先物取引や株式投資などで学費を賄える程度の利益を出し、オファーを受け投資のメンターなどを経験しました。<br><br>
+                        ですが、安定したインカムゲインを形成するほどのスキルを投資からは得られなかったことから、人生のセーフティネットとなり得るスキルを身につけたいと考え、プログラミング学習を開始しました。</span>
+                    </li>
+                    <li class ="int-p">
+                        <span class = "int-span">スキル</span>
+                        <span>：</span>
+                        <span class = "int-span2">HTML</span><span class = "int-span2">CSS</span><span class = "int-span2">Bootstrap</span><span class = "int-span2">Ruby</span><span class = "int-span2">Ruby on Rails</span><span class = "int-span2">Git</span><span class = "int-span2">Github</span><span class = "int-span2">Docker</span><span class = "int-span2">Rspec</span>
+                    </li>
+                </div>
+            </div>
+            
+            
+            <h1 class = "h1-title" id = "works">Works</h1>
+            <p class = "p">成果物</p>
+            <hr color="#FE2E64" class = "hr">
+            <div class = "row works-list">
+                <div class = "col-md-6 order-md-1">
+                    <img src = "imgs/carsenziki.png" alt = "carsebziki" class = "works-img">
+                </div>
+                <div class = "col-md-6 works order-md-2">
+                    <h3>カーセンジキ</h3>
+                    <hr color = "#F2F2F2">
+                    <p>なんとかなんとかなんとかなんとかなんとかなんとかなんとかなんとかなんとかなんとかなんとかなんとかなんとかなんとかなんとかなんとかなんとか</p>
+                </div>
+                          
+                <div class = "col-md-6  order-md-4">
+                    <img src = "imgs/programenter.png" alt = "programenter" class = "works-img">
+                </div>
+                <div class = "col-md-6 works order-md-3">
+                    <h3>Programenter</h3>
+                    <hr color = "#F2F2F2">
+                    <p>なんとかなんとかなんとかなんとかなんとかなんとかなんとかなんとかなんとかなんとかなんとかなんとかなんとかなんとかなんとかなんとかなんとか</p>
+                </div>
+                          
+                <div class = "col-md-6  order-md-5">
+                    <img src = "imgs/service3.jpg" alt = "サービス１" class = "works-img">
+                </div>
+                <div class = "col-md-6 works order-md-6">
+                    <h3>その他</h3>
+                    <hr color = "#F2F2F2">
+                    <p>なんとかなんとかなんとかなんとかなんとかなんとかなんとかなんとかなんとかなんとかなんとかなんとかなんとかなんとかなんとかなんとかなんとか</p>
+                </div>
+            </div>
+            
+            <h1 class = "h1-title" id = "contact">Contact</h1>
+            <p class = "p">コンタクト</p>
+            <hr color="#FE2E64" class = "hr">
             <div class = "row">
             </div>
         </div>
@@ -58,4 +125,72 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
+    <script type="text/javascript">
+    var vGoTop = {};
+    function goTop(){
+     
+      vGoTop["coef"] = 50;  // ←滑らか係数（大きいほど滑らか）
+      vGoTop["cnt"]  = 0;
+     
+      // --- 現在のスクロール位置取得 -----
+      var startX = document.body.scrollLeft || document.documentElement.scrollLeft;
+      var startY = document.body.scrollTop  || document.documentElement.scrollTop;
+     
+      // --- スクロールの単位計算 ---------
+      var moveSplitCnt = 0;
+      for(var i = 1; i <= vGoTop["coef"]; i++) {
+        moveSplitCnt += i * i;
+      }
+      vGoTop["unitH"] = startY / ( moveSplitCnt * 2 );
+     
+      vGoTop["nextX"] = startX;
+      vGoTop["nextY"] = startY;
+     
+      // --- スクロール開始 ---------------
+      goTopLoop();
+    }
+    function goTopLoop(){
+     // ============================================================================
+     //  スクロール実行
+     // ============================================================================
+     
+      vGoTop["cnt"]++;
+     
+      // --- 次のスクロール位置計算 -------
+      var Coef = 0;
+      if(vGoTop["cnt"] <= vGoTop["coef"]){
+        Coef = vGoTop["cnt"];
+      }else{
+        Coef = ((vGoTop["coef"] * 2) + 1) - vGoTop["cnt"];
+      }
+      vGoTop["nextY"] = vGoTop["nextY"] - Math.round( vGoTop["unitH"] * ( Coef * Coef) );
+      if((vGoTop["cnt"] >= (vGoTop["coef"] * 2))||(vGoTop["nextY"] <= 0)){
+        vGoTop["nextY"] = 0;
+      }
+     
+      // --- スクロール実行 ---------------
+      window.scrollTo(vGoTop["nextX"], vGoTop["nextY"]);
+     
+      // --- 次のスクロールを設定 ---------
+      if(vGoTop["nextY"] <= 0){
+        clearTimeout(vGoTop["timer"]);                   // 終了：タイマクリア
+      }else{
+        vGoTop["timer"] = setTimeout("goTopLoop()",10);  // 次のループ
+      }
+    }
+    window.addEventListener("scroll", goTopDisp, false);
+    function goTopDisp(){
+     // ============================================================================
+     //  先頭表示時のボタン消去
+     // ============================================================================
+      var btn  = document.getElementById("topScroll");
+     
+      var nowY = document.body.scrollTop  || document.documentElement.scrollTop;
+      if(nowY ==0){
+        btn.style.display = "none";
+      }else{
+        btn.style.display = "";
+      }
+    }
+    </script>
 </html>

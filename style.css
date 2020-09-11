@@ -9,6 +9,30 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+}
+
+.topIcon {
+  display       : inline-block;
+  position      : fixed;       /* ボタン固定 */
+  bottom        : 20px;        /* 下から位置 */
+  right         : 20px;        /* 右から位置 */
+  padding       : 10px 12px;   /* 余白       */
+  background    : #ff4d4d;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  opacity       : 0.5;         /* 透明度     */
+  border-radius : 5%;        /* 角丸       */
+  font-size     : 20pt;        /* 文字サイズ */
+  font-weight   : bold;        /* 太字       */
+  line-height   : 1.2em;       /* 行の高さ   */
+  letter-spacing: 2px;         /* 文字間隔   */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  z-index       : 999;         /* 重ね順位   */
+}
+
+.topIcon:hover {
+  opacity       : 0.9;   /* カーソル時透明度 */
 }
 
 .header {
@@ -139,26 +163,19 @@
 
 .btn-2:hover {
     color: #fff;
-    background: #848484;
+    background: #FE2E64;
     text-decoration: none;
 }
 
 .body{
     background-color: #2E2E2E;
-    font-family: 'ヒラギノ角ゴ StdN','Hiragino Kaku Gothic StdN',sans-serif;
-}
-
-.container {
-    color: #fff;
-    text-align: center;
-    padding:80px 0;
 }
 
 .title {
     position: absolute;
     position: absolute;
     top: 25%;
-    left:50%;
+    left: 50%;
     transform : translate(-50%,-50%);
 }
 
@@ -318,12 +335,14 @@
 	transition: color 0.4s ease;
 }
 .cp_fullscreenmenu .menu > div > ul > li > a:hover {
+    background-color: #FE2E64;
 	color: #fff;
 }
 .cp_fullscreenmenu .menu > div > ul > li > a:hover:after {
 	width: 100%;
 }
 .cp_fullscreenmenu .menu > div > ul > li > a:after {
+    background-color: #FE2E64;
 	position: absolute;
 	z-index: 1;
 	bottom: -0.15em;
@@ -433,3 +452,83 @@
 	top: 10px;
 }
 
+.h1-title {
+    color: #fff;
+    text-align: center;
+    padding: 80px 0 20px 0;
+    text-shadow    : 
+       2px  2px 6px #7f7f7f,
+      -2px  2px 6px #7f7f7f,
+       2px -2px 6px #7f7f7f,
+      -2px -2px 6px #7f7f7f,
+       2px  0px 6px #7f7f7f,
+       0px  2px 6px #7f7f7f,
+      -2px  0px 6px #7f7f7f,
+       0px -2px 6px #7f7f7f;        /* 文字の影 */
+}
+
+.p {
+    color: #fff;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.hr {
+    margin: 0 auto 60px auto;
+    width: 40%;
+}
+
+.int {
+    text-align: center;
+}
+
+.myicon-img {
+    width: 80%;
+    margin-bottom: 56px;
+    border-radius: 50%;
+    border: 2px solid #F2F2F2;
+}
+
+.int-p {
+    list-style: none;
+    color: #F2F2F2;
+    background-color: #424242;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.int-span {
+    color: #FE2E64;
+    font-size: 20px;
+    font-weight: bold;
+}
+.int-span2 {
+    display: inline-block;
+    color: #F2F2F2;
+    border: 1px solid #F2F2F2;
+    border-radius: 2px;
+    padding: 6px;
+    margin: 4px;
+}
+
+.bold {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.works {
+    padding: 32px;
+}
+
+.works h3 {
+    color: #F2F2F2;
+}
+
+.works p {
+    color: #F2F2F2;
+}
+
+.works-img {
+    width: 100%;
+}
