@@ -673,4 +673,5 @@ figure.cp_caption:hover figcaption::before {
     background-color: #1C1C1C;
     padding: 60px;
     color: #BDBDBD;
+    margin-bottom: -16px;
 }
